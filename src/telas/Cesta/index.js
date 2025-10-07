@@ -1,24 +1,23 @@
 import react from "react";
-import { FlatList, StyleSheet, View } from "react-native-web";
-import { StyleSheet } from "react-native/types_generated/index";
+import { FlatList, StyleSheet, View } from "react-native";
 
-export default function Cesta(){
+export default function Cesta(itens){
     <FlatList>
         data={itens.lista}
         renderItem={item}
         keyExtractor={({nome})=> nome}
-        ListHeaderComponet={()=>{
-            return <>
-                   </>
-        }}
+            ListHeaderComponent={()=> {
+                return  <>
+                        
+                        </>
+            }}
     </FlatList>
 }
-
 
 const estilos = StyleSheet.create({
     titulo:{
         color:"#464646",
-        fontWeigth:"bold",
+        fontWeight:"bold",
         marginTop:32,
         marginBottom:8,
         fontSize:20,
